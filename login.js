@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 showNotification('Login successful! Redirecting...');
                 // Redirect to the dashboard after a short delay
                 setTimeout(() => {
-                    window.location.href = '';
+                    window.location.href = 'https://aashutosh31.github.io/Table-Tennis/';
                 }, 1500);
             } else {
                 // If credentials do not match, show an error message
@@ -52,3 +52,4 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Login form not found!');
     }
 });
+
