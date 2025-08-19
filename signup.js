@@ -53,10 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show success message and redirect to the login page
             showNotification('Sign up successful! Please log in.');
             setTimeout(() => {
-                window.location.href = 'practice/HTML/Login.html';
+                window.location.href = 'index.html';
             }, 2000);
         });
     } else {
         console.error('Signup form not found!');
     }
 });
+
