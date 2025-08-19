@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cart - Sign Up</title>
+    <!-- Link to the shared CSS file -->
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+
+    <!-- Notification container for messages -->
+    <div id="notification" class="notification"></div>
+
+    <div class="login-container">
+        <!-- The colorful, revolving heading -->
+        <h1 class="color-cycle-heading">Create Account</h1>
+
+        <form id="signup-form">
+            <!-- Full Name Input -->
+            <div class="input-group">
+                <label for="fullname" class="form-label">Full Name</label>
+                <input type="text" id="fullname" class="modern-input" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email Input -->
+            <div class="input-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="modern-input" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="modern-input" placeholder="Create a password" required minlength="8">
+            </div>
+            
+            <!-- Confirm Password Input -->
+            <div class="input-group">
+                <label for="confirm-password" class="form-label">Confirm Password</label>
+                <input type="password" id="confirm-password" class="modern-input" placeholder="Confirm your password" required minlength="8">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="login-btn">Sign Up</button>
+        </form>
+
+        <div class="signup-link">
+            <p>Already have an account? <a href="Login.html">Log In</a></p>
+        </div>
+    </div>
+
+    <!-- Link to the new JavaScript file for signup logic -->
+    <script src="../Java Script/signup.js"></script>
+</body>
+</html>

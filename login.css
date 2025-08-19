@@ -1,0 +1,158 @@
+/* Using a CSS variable for the main color makes it easy to customize */
+:root {
+  --brand-color-primary: #7b68ee;   /* Medium Slate Blue */
+  --brand-color-secondary: #5d4ad6; /* A slightly darker shade */
+  --font-family-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-main);
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Hide scrollbars from notification */
+}
+
+/* --- NOTIFICATION STYLES --- */
+.notification {
+    position: fixed;
+    top: -100px; /* Start off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    border-radius: 8px;
+    background-color: #2ecc71; /* Default success color */
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: top 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.notification.show {
+    top: 20px; /* Slide into view */
+}
+
+
+.login-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  text-align: center;
+  /* The best white shadow effect */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4),
+              0 8px 30px rgba(0, 0, 0, 0.1),
+              0 12px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* --- HEADING --- */
+.color-cycle-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #ff2400);
+  background-size: 200% auto;
+  animation: gradient-animation 4s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* --- FORM ELEMENTS --- */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.modern-input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
+}
+
+.modern-input::placeholder {
+  color: #a9a9a9;
+}
+
+.modern-input:focus {
+  outline: none;
+  border-color: var(--brand-color-primary);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.2);
+}
+
+/* --- BUTTONS --- */
+.login-btn {
+  font-family: var(--font-family-main);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.5px;
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, var(--brand-color-primary) 0%, var(--brand-color-secondary) 100%);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  filter: brightness(0.95);
+}
+
+/* --- SIGN-UP LINK --- */
+.signup-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.signup-link a {
+  color: var(--brand-color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cart - Login</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="../CSS/login.css">
+    <!-- Google Fonts for Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    
+    <!-- Notification container for messages -->
+    <div id="notification" class="notification"></div>
+
+    <div class="login-container">
+        <!-- The colorful, revolving heading -->
+        <h1 class="color-cycle-heading">Table Tennis🏓</h1>
+
+        <form id="login-form">
+            <!-- Email Input (changed from username for clarity) -->
+            <div class="input-group">
+                <label for="username" class="form-label">Email</label>
+                <input type="email" id="username" class="modern-input" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Password Input -->
+            <div class="input-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="modern-input" placeholder="Enter your password" required minlength="8">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+
+        <div class="signup-link">
+            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Link to the updated JavaScript file -->
+    <script src="../Java Script/login.js"></script>
+</body>
+</html>
